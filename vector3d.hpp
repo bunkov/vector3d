@@ -22,16 +22,17 @@ public:
     vector3d operator^(const vector3d &a) const;
 
     bool operator==(const vector3d &a) const;
+    bool operator!=(const vector3d &a) const;
 
     double length() const;
-    vector3d normalize(const vector3d &a);
+    vector3d normalize();
 
 
 };
 
-double operator*(const double i, const vector3d &vector);
-double operator*(const vector3d &vector, const double i);
+vector3d operator*(const double i, vector3d &vector);
+vector3d operator*(vector3d &vector, const double i);
 
-//std::ostream &operator<<(std::ostream &stream, const vector3d & a);
+std::ostream &operator<<(std::ostream &stream, const vector3d & a);
 
 #endif
